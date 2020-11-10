@@ -10,10 +10,28 @@ require "config.php";
 
 try {
   $connection = new PDO("mysql:host=$host", $username, $password, $options);
-  $sql = file_get_contents("init.sql");
+  $sql = file_get_contents("university.sql");
   $connection->exec($sql);
-
   echo "Database and table users created successfully.";
-} catch(PDOException $error) {
+
+} catch (PDOException $error) {
   echo $sql . "<br>" . $error->getMessage();
 }
+
+
+
+/**
+  * require "config.php";
+
+  * try {
+  * $connection = new PDO("mysql:host=$host", $username, $password, $options);
+  * $sql = file_get_contents("init.sql");
+  * $connection->exec($sql);
+
+  * echo "Database and table users created successfully.";
+  * } catch(PDOException $error) {
+  * echo $sql . "<br>" . $error->getMessage();
+  * }
+*/
+
+>?

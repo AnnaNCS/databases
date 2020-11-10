@@ -2,10 +2,10 @@
 
     <ul>
       <li>
-        <a href="create.php"><strong>Create</strong></a> - add a user
+        <a href="create.php"><strong>Create</strong></a> - Add a course
       </li>
       <li>
-        <a href="read.php"><strong>Read</strong></a> - find a user
+        <a href="read.php"><strong>Read</strong></a> - Find a course
       </li>
     </ul>
   </body>
