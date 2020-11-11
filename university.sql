@@ -4,6 +4,8 @@ USE `university`;
 
 CREATE TABLE `Location`(
 `Location_code` VARCHAR(50),
+`Building`  VARCHAR(50),
+`RoomNumber` INT,
 PRIMARY KEY(`Location_code`)
 );
 
@@ -40,7 +42,6 @@ PRIMARY KEY(`Student_id`)
 
 CREATE TABLE `Course`(
 `Course_id` VARCHAR(50) NOT NULL,
-`Section` INT,
 `Name` VARCHAR (50),
 `Dept_id` VARCHAR (50),
 `Units` INT,
@@ -183,13 +184,13 @@ VALUES
 
 INSERT INTO `Course`
 VALUES
-('COMP131', 1, 'Intro to Computer Science', 'COMP', 4, 'P1003', 'MWF 11:00-11:45', 'M100', 24, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
-('COMP131-2', 2, 'Intro to Computer Science', 'COMP', 4, 'P1004', 'MWF 9:45-10:30', 'M101', 22, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
-('COMP229', 1, 'Data Structures', 'COMP', 4, 'P1018', 'MWF 11:00-11:45', 'M103', 26, 'We begin with topics found in advanced programming. In particular, topics from Object Oriented programming and how this differs from Procedural Programming. We then move on to the study of dynamic data structures, such as Linked Lists, Stacks, Queues, Trees, Heaps, Graphs, Hash tables, Sets and more.'),
-('COMP239', 1, 'Computer Organization', 'COMP', 4, 'P1021', 'MWF 11:00-11:45', 'M106', 29, 'This course covers the basics of how a computer works, focusing especially on the hardware-software interface. Students will learn about the limitations of the physical computer, and that it may not be possible to ignore the lower-level hardware when designing efficient software. Students will learn to implement programs in Assembly language and C/C++.'),
-('COMP325', 1, 'Topics in AI', 'COMP', 4, 'P1018', 'TR 8:30-10:00', 'M109', 30, 'This course covers select topics in artificial intelligence, including: reinforcement learning, Bayesian networks, and cognitive architectures.'),
-('PHIL101', 1, 'Intro to Philosophy', 'PHIL', 4, 'P1016', 'MWF 9:45-10:30', 'P100', 21, 'This course introduces students to the central philosophical skills of critical thinking, careful reading, and analytical writing. Students will engage with a range of both historical and contemporary philosophical texts, from multiple regions and time periods, and with a range of philosophical questions that reflect the four content areas that structure our curriculum.'),
-('PHIL231', 1, 'Environmental and Animal Ethics', 'PHIL', 4, 'P1067', 'TR 10:30-12:00', 'P103', 24, 'This course will examine the ethical dimensions of our relationship to non-human animals and the environment, including a special emphasis on climate justice as the site of interconnected and global moral, political, and scientific concerns. Some of the questions we will address include: What is the relation between the environment and human health and well-being?');
+('COMP131','Intro to Computer Science', 'COMP', 4, 'P1003', 'MWF 11:00-11:45', 'M100', 24, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
+('COMP131-2','Intro to Computer Science', 'COMP', 4, 'P1004', 'MWF 9:45-10:30', 'M101', 22, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
+('COMP229','Data Structures', 'COMP', 4, 'P1018', 'MWF 11:00-11:45', 'M103', 26, 'We begin with topics found in advanced programming. In particular, topics from Object Oriented programming and how this differs from Procedural Programming. We then move on to the study of dynamic data structures, such as Linked Lists, Stacks, Queues, Trees, Heaps, Graphs, Hash tables, Sets and more.'),
+('COMP239','Computer Organization', 'COMP', 4, 'P1021', 'MWF 11:00-11:45', 'M106', 29, 'This course covers the basics of how a computer works, focusing especially on the hardware-software interface. Students will learn about the limitations of the physical computer, and that it may not be possible to ignore the lower-level hardware when designing efficient software. Students will learn to implement programs in Assembly language and C/C++.'),
+('COMP325','Topics in AI', 'COMP', 4, 'P1018', 'TR 8:30-10:00', 'M109', 30, 'This course covers select topics in artificial intelligence, including: reinforcement learning, Bayesian networks, and cognitive architectures.'),
+('PHIL101','Intro to Philosophy', 'PHIL', 4, 'P1016', 'MWF 9:45-10:30', 'P100', 21, 'This course introduces students to the central philosophical skills of critical thinking, careful reading, and analytical writing. Students will engage with a range of both historical and contemporary philosophical texts, from multiple regions and time periods, and with a range of philosophical questions that reflect the four content areas that structure our curriculum.'),
+('PHIL231','Environmental and Animal Ethics', 'PHIL', 4, 'P1067', 'TR 10:30-12:00', 'P103', 24, 'This course will examine the ethical dimensions of our relationship to non-human animals and the environment, including a special emphasis on climate justice as the site of interconnected and global moral, political, and scientific concerns. Some of the questions we will address include: What is the relation between the environment and human health and well-being?');
 
 ALTER TABLE `Major`
 ADD FOREIGN KEY (`Dep_char`) REFERENCES `Professor`(`Professor_id`);
@@ -201,8 +202,6 @@ ADD FOREIGN KEY(`Major`) REFERENCES `Major`(`Dep_id`);
 ALTER TABLE `Professor`
 ADD FOREIGN KEY(`Dept_in`) REFERENCES `Major`(`Dep_id`),
 ADD FOREIGN KEY(`Office_location`) REFERENCES `Location`(`Location_code`);
-Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`university`.`#sql-71_9`, CONSTRAINT `professor_ibfk_2` FOREIGN KEY (`Office_location`) REFERENCES `location` (`Location_code`))
-
 
 ALTER TABLE `Course`
 ADD FOREIGN KEY(`Dept_id`) REFERENCES `Major`(`Dep_id`),
