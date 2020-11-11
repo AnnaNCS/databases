@@ -54,17 +54,30 @@ PRIMARY KEY(`Course_id`)
 
 INSERT INTO Location
 VALUES
-('M101'), ('M103'),('M106'),('M109'),('P100'),('P103'),
-('O100'), ('O101'),('O102'),('O103'),('O104'),('O105'),('O106'),('O107'),('O108'),('O109'),('O110'),('O111'),('O112'),('O113'),('O114'),('O115'),
-('O200'),('O201'),('O202'),('O203'),('O204'),('O205'),('O206'),('O207'),('O208'),('O209'),('O210'),('O211'),('O212'),('O213'),('O214'),('O215'),
-('O300'),('O301'),('O302'),('O303'),('O304'),('O305'),('O306'),('O307'),('O308'),('O309'),('O310'),('O311'),('O312'),('O313'),('O314'),('O315'),
-('O400'),('O401'),('O402'),('O403'),('O404'),('O405'),('O406'),('O407'),('O408'),('O409'),('O410'),('O411'),('O412'),('O413'),('O414'),('O415'),
-('O500'),('O501'),('O502'),('O503'),('O504');
+('O100','Swan',100), ('O101','Swan',101),('O102','Swan',102),('O103','Swan',103),('O104','Swan',104),('O105','Swan',105),('O106','Swan',106),('O107','Swan',107),('O108','Swan',108),('O109','Swan',109),('O110','Swan',110),('O111','Swan',111),('O112','Swan',112),('O113','Swan',113),('O114','Swan',114),('O115','Swan',115),
+('O200','Swan',200),('O201','Swan',201),('O202','Swan',202),('O203','Swan',203),('O204','Swan',204),('O205','Swan',205),('O206','Swan',206),('O207','Swan',207),('O208','Swan',208),('O209','Swan',209),('O210','Swan',210),('O211','Swan',211),('O212','Swan',212),('O213','Swan',213),('O214','Swan',214),('O215','Swan',215),
+('O300','Swan',300),('O301','Swan',301),('O302','Swan',302),('O303','Swan',303),('O304','Swan',304),('O305','Swan',305),('O306','Swan',306),('O307','Swan',307),('O308','Swan',308),('O309','Swan',309),('O310','Swan',310),('O311','Swan',311),('O312','Swan',312),('O313','Swan',313),('O314','Swan',314),('O315','Swan',315),
+('O400','Swan',400),('O401','Swan',401),('O402','Swan',402),('O403','Swan',403),('O404','Swan',404),('O405','Swan',405),('O406','Swan',406),('O407','Swan',407),('O408','Swan',408),('O409','Swan',409),('O410','Swan',410),('O411','Swan',411),('O412','Swan',412),('O413','Swan',413),('O414','Swan',414),('O415','Swan',415),
+('O500','Swan',500),('O501','Swan',501),('O502','Swan',502),('O503','Swan',503),('O504','Swan',504),
+('F100','Fowler',100),('F101','Fowler',101),('F102','Fowler',102),('F103','Fowler',103),('F104','Fowler',104),('F105','Fowler',105),('F106','Fowler',106),('F107','Fowler',107),('F108','Fowler',108),('F109','Fowler',109),('F110','Fowler',110),
+('F200','Fowler',200),('F201','Fowler',201),('F202','Fowler',202),('F203','Fowler',203),('F204','Fowler',204),('F205','Fowler',205),('F206','Fowler',206),('F207','Fowler',207),('F208','Fowler',208),('F209','Fowler',209),('F210','Fowler',210),
+('C100','Choi',100),('C101','Choi',101),('C102','Choi',102),('C103','Choi',103),('C104','Choi',104),('C105','Choi',105),('C106','Choi',106),('C107','Choi',107),('C108','Choi',108),('C109','Choi',109),('C110','Choi',110),
+('C200','Choi',200),('C201','Choi',201),('C202','Choi',202),('C203','Choi',203),('C204','Choi',204),('C205','Choi',205),('C206','Choi',206),('C207','Choi',207),('C208','Choi',208),('C209','Choi',209),('C210','Choi',210),
+('B100','Berkus',100),('B101','Berkus',101),('B102','Berkus',102),('B103','Berkus',103),('B104','Berkus',104),('B105','Berkus',105),('B106','Berkus',106),('B107','Berkus',107),('B108','Berkus',108),('B109','Berkus',109),('B110','Berkus',110),
+('B200','Berkus',200),('B201','Berkus',201),('B202','Berkus',202),('B203','Berkus',203),('B204','Berkus',204),('B205','Berkus',205),('B206','Berkus',206),('B207','Berkus',207),('B208','Berkus',208),('B209','Berkus',209),('B210','Berkus',210),
+('HSC100','Hameetman Science Center',100),('HSC101','Hameetman Science Center',101),('HSC102','Hameetman Science Center',102),('HSC103','Hameetman Science Center',103),('HSC104','Hameetman Science Center',104),('HSC105','Hameetman Science Center',105),
+('HSC106','Hameetman Science Center',106),('HSC107','Hameetman Science Center',107),('HSC108','Hameetman Science Center',108),('HSC109','Hameetman Science Center',109),('HSC110','Hameetman Science Center',110),
+('HSC200','Hameetman Science Center',200),('HSC201','Hameetman Science Center',201),('HSC202','Hameetman Science Center',202),('HSC203','Hameetman Science Center',203),('HSC204','Hameetman Science Center',204),('HSC205','Hameetman Science Center',205),
+('HSC206','Hameetman Science Center',206),('HSC207','Hameetman Science Center',207),('HSC208','Hameetman Science Center',208),('HSC209','Hameetman Science Center',209),('HSC210','Hameetman Science Center',210),
+('LIB100','Library',100),('LIB101','Library',101),('LIB102','Library',102),('LIB103','Library',103),('LIB104','Library',104),('LIB105','Library',105),('LIB106','Library',106),('LIB107','Library',107),('LIB108','Library',108),('LIB109','Library',109),('LIB110','Library',110),
+('LIB200','Library',200),('LIB201','Library',201),('LIB202','Library',202),('LIB203','Library',203),('LIB204','Library',204),('LIB205','Library',205),('LIB206','Library',206),('LIB207','Library',207),('LIB208','Library',208),('LIB209','Library',209),('LIB210','Library',210),
+('J100','Johnson',100),('J101','Johnson',101),('J102','Johnson',102),('J103','Johnson',103),('J104','Johnson',104),('J105','Johnson',105),('J106','Johnson',106),('J107','Johnson',107),('J108','Johnson',108),('J109','Johnson',109),('J110','Johnson',110),
+('J200','Johnson',200),('J201','Johnson',201),('J202','Johnson',202),('J203','Johnson',203),('J204','Johnson',204),('J205','Johnson',205),('J206','Johnson',206),('J207','Johnson',207),('J208','Johnson',208),('J209','Johnson',209),('J210','Johnson',210);
 
 SELECT * FROM Location;
 
 INSERT INTO Major
-values
+VALUES
 ('BIO',	'Biology', 'P1006'),
 ('BLST', 'Black Studies', 'P1007'),
 ('CHEM', 'Chemistry', 'P1008'),
