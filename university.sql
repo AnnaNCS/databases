@@ -59,7 +59,7 @@ VALUES
 ('O200','Swan',200),('O201','Swan',201),('O202','Swan',202),('O203','Swan',203),('O204','Swan',204),('O205','Swan',205),('O206','Swan',206),('O207','Swan',207),('O208','Swan',208),('O209','Swan',209),('O210','Swan',210),('O211','Swan',211),('O212','Swan',212),('O213','Swan',213),('O214','Swan',214),('O215','Swan',215),
 ('O300','Swan',300),('O301','Swan',301),('O302','Swan',302),('O303','Swan',303),('O304','Swan',304),('O305','Swan',305),('O306','Swan',306),('O307','Swan',307),('O308','Swan',308),('O309','Swan',309),('O310','Swan',310),('O311','Swan',311),('O312','Swan',312),('O313','Swan',313),('O314','Swan',314),('O315','Swan',315),
 ('O400','Swan',400),('O401','Swan',401),('O402','Swan',402),('O403','Swan',403),('O404','Swan',404),('O405','Swan',405),('O406','Swan',406),('O407','Swan',407),('O408','Swan',408),('O409','Swan',409),('O410','Swan',410),('O411','Swan',411),('O412','Swan',412),('O413','Swan',413),('O414','Swan',414),('O415','Swan',415),
-('O500','Swan',500),('O501','Swan',501),('O502','Swan',502),('O503','Swan',503),('O504','Swan',504),
+('O500','Swan',500),('O501','Swan',501),('O502','Swan',502),('O503','Swan',503),('O504','Swan',504),('O505','Swan',505),('O506','Swan',506),
 ('F100','Fowler',100),('F101','Fowler',101),('F102','Fowler',102),('F103','Fowler',103),('F104','Fowler',104),('F105','Fowler',105),('F106','Fowler',106),('F107','Fowler',107),('F108','Fowler',108),('F109','Fowler',109),('F110','Fowler',110),
 ('F200','Fowler',200),('F201','Fowler',201),('F202','Fowler',202),('F203','Fowler',203),('F204','Fowler',204),('F205','Fowler',205),('F206','Fowler',206),('F207','Fowler',207),('F208','Fowler',208),('F209','Fowler',209),('F210','Fowler',210),
 ('C100','Choi',100),('C101','Choi',101),('C102','Choi',102),('C103','Choi',103),('C104','Choi',104),('C105','Choi',105),('C106','Choi',106),('C107','Choi',107),('C108','Choi',108),('C109','Choi',109),('C110','Choi',110),
@@ -164,7 +164,9 @@ VALUES
 ('P1068', 'Arlena', 'Lackemann', 'PHIL', 'O501'),
 ('P1017', 'Andrew', 'Shtulman', 'PSYC', 'O502'),
 ('P1069', 'Zared', 'McEvay', 'PSYC', 'O503'),
-('P1070', 'Devin', 'Bursnoll', 'PSYC', 'O504');
+('P1070', 'Devin', 'Bursnoll', 'PSYC', 'O504'),
+('P1071', 'Drake', 'Bell', 'PSYC', 'O505'),
+('P1072', 'Josh', 'Peck', 'PSYC', 'O506');
 
 INSERT INTO `Student`
 VALUES
@@ -184,13 +186,13 @@ VALUES
 
 INSERT INTO `Course`
 VALUES
-('COMP131','Intro to Computer Science', 'COMP', 4, 'P1003', 'MWF 11:00-11:45', 'M100', 24, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
-('COMP131-2','Intro to Computer Science', 'COMP', 4, 'P1004', 'MWF 9:45-10:30', 'M101', 22, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
-('COMP229','Data Structures', 'COMP', 4, 'P1018', 'MWF 11:00-11:45', 'M103', 26, 'We begin with topics found in advanced programming. In particular, topics from Object Oriented programming and how this differs from Procedural Programming. We then move on to the study of dynamic data structures, such as Linked Lists, Stacks, Queues, Trees, Heaps, Graphs, Hash tables, Sets and more.'),
-('COMP239','Computer Organization', 'COMP', 4, 'P1021', 'MWF 11:00-11:45', 'M106', 29, 'This course covers the basics of how a computer works, focusing especially on the hardware-software interface. Students will learn about the limitations of the physical computer, and that it may not be possible to ignore the lower-level hardware when designing efficient software. Students will learn to implement programs in Assembly language and C/C++.'),
-('COMP325','Topics in AI', 'COMP', 4, 'P1018', 'TR 8:30-10:00', 'M109', 30, 'This course covers select topics in artificial intelligence, including: reinforcement learning, Bayesian networks, and cognitive architectures.'),
-('PHIL101','Intro to Philosophy', 'PHIL', 4, 'P1016', 'MWF 9:45-10:30', 'P100', 21, 'This course introduces students to the central philosophical skills of critical thinking, careful reading, and analytical writing. Students will engage with a range of both historical and contemporary philosophical texts, from multiple regions and time periods, and with a range of philosophical questions that reflect the four content areas that structure our curriculum.'),
-('PHIL231','Environmental and Animal Ethics', 'PHIL', 4, 'P1067', 'TR 10:30-12:00', 'P103', 24, 'This course will examine the ethical dimensions of our relationship to non-human animals and the environment, including a special emphasis on climate justice as the site of interconnected and global moral, political, and scientific concerns. Some of the questions we will address include: What is the relation between the environment and human health and well-being?');
+('COMP131','Intro to Computer Science', 'COMP', 4, 'P1003', 'MWF 11:00-11:45', 'F100', 24, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
+('COMP131-2','Intro to Computer Science', 'COMP', 4, 'P1004', 'MWF 9:45-10:30', 'F101', 22, 'Computer science is about the organization of information and the design of processes that use it. This course teaches students to think computationally, how to break processes down into components that can be then fully described, and to acquire other habits necessary for a computer scientist.'),
+('COMP229','Data Structures', 'COMP', 4, 'P1018', 'MWF 11:00-11:45', 'F103', 26, 'We begin with topics found in advanced programming. In particular, topics from Object Oriented programming and how this differs from Procedural Programming. We then move on to the study of dynamic data structures, such as Linked Lists, Stacks, Queues, Trees, Heaps, Graphs, Hash tables, Sets and more.'),
+('COMP239','Computer Organization', 'COMP', 4, 'P1021', 'MWF 11:00-11:45', 'F106', 29, 'This course covers the basics of how a computer works, focusing especially on the hardware-software interface. Students will learn about the limitations of the physical computer, and that it may not be possible to ignore the lower-level hardware when designing efficient software. Students will learn to implement programs in Assembly language and C/C++.'),
+('COMP325','Topics in AI', 'COMP', 4, 'P1018', 'TR 8:30-10:00', 'F109', 30, 'This course covers select topics in artificial intelligence, including: reinforcement learning, Bayesian networks, and cognitive architectures.'),
+('PHIL101','Intro to Philosophy', 'PHIL', 4, 'P1016', 'MWF 9:45-10:30', 'C100', 21, 'This course introduces students to the central philosophical skills of critical thinking, careful reading, and analytical writing. Students will engage with a range of both historical and contemporary philosophical texts, from multiple regions and time periods, and with a range of philosophical questions that reflect the four content areas that structure our curriculum.'),
+('PHIL231','Environmental and Animal Ethics', 'PHIL', 4, 'P1067', 'TR 10:30-12:00', 'C103', 24, 'This course will examine the ethical dimensions of our relationship to non-human animals and the environment, including a special emphasis on climate justice as the site of interconnected and global moral, political, and scientific concerns. Some of the questions we will address include: What is the relation between the environment and human health and well-being?');
 
 ALTER TABLE `Major`
 ADD FOREIGN KEY (`Dep_char`) REFERENCES `Professor`(`Professor_id`);
