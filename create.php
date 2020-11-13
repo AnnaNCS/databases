@@ -1,4 +1,5 @@
-<?php include "header.php"; ?>
+<?php include "header.php";
+include('db_connection.php'); ?>
 
     <h2>Add a course</h2>
 
@@ -10,34 +11,69 @@
         <label for="coursename">Name</label>
         <input type="text" name="coursename" id="coursename">
 
+
         <label for="deptid">Department ID</label>
         <?php
-        require "config.php";
-        $connection = new PDO($dsn, $username, $password, $options);
-        $resultSet = $connection->query("SELECT Dept_id FROM Course");
+        $conn = OpenCon();
+        $resultSet = "SELECT DISTINCT Dep_id FROM Major";
+        $sql_dat = mysqli_query($conn, $resultSet)
         ?>
-        
         <select name="deptid">
-    
         <?php
-        
-        while ($rows = $resultSet->fetch(PDO::FETCH_ASSOC)){
-            $dept_name = $rows["deptid"];
+        while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
+            $deptid = $rows["Dep_id"];
             echo "<option value='$deptid'>$deptid</option>";
         } ?>
         </select>
 
+
         <label for="units">Units</label>
         <input type="text" name="units" id="units">
 
+        
         <label for="professor">Professor</label>
-        <input type="text" name="professor" id="professor">
+        <?php
+        $conn = OpenCon();
+        $resultSet = "SELECT DISTINCT Professor_id FROM Professor";
+        $sql_dat = mysqli_query($conn, $resultSet)
+        ?>
+        <select name="professor">
+        <?php
+        while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
+            $prof = $rows["Professor_id"];
+            echo "<option value='$prof'>$prof</option>";
+        } ?>
+        </select>
+
 
         <label for="time">Time</label>
-        <input type="text" name="time" id="time">
+        <?php
+        $conn = OpenCon();
+        $resultSet = "SELECT DISTINCT Time FROM Course";
+        $sql_dat = mysqli_query($conn, $resultSet)
+        ?>
+        <select name="time">
+        <?php
+        while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
+            $time = $rows["Time"];
+            echo "<option value='$time'>$time</option>";
+        } ?>
+        </select>
+        
 
         <label for="location">Location</label>
-        <input type="text" name="location" id="location">
+        <?php
+        $conn = OpenCon();
+        $resultSet = "SELECT DISTINCT Course_location FROM Course";
+        $sql_dat = mysqli_query($conn, $resultSet)
+        ?>
+        <select name="location">
+        <?php
+        while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
+            $loc = $rows["Course_location"];
+            echo "<option value='$loc'>$loc</option>";
+        } ?>
+        </select>
 
         <label for="enrolledstudents">Students Enrolled</label>
         <input type="text" name="enrolledstudents" id="enrolledstudents">

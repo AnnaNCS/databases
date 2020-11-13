@@ -1,7 +1,9 @@
 <?php include "header.php"; ?>
 
     <ul>
-    
+    <a href="login.php"><strong>Log In</a>
+    </ul>
+    <ul>
     <a href="create.php"><strong>Add Course</a>
     </ul>
     <ul>
@@ -10,10 +12,7 @@
     <ul>
     <a href="register.php"><strong>See all Courses</a>
     </ul>
-    <ul>
-    <a href="remove.php"><strong>Drop a Course</a>
-    
-    </ul>
+   
 
   </body>
 </html>

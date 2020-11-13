@@ -1,5 +1,13 @@
 <?php include "header.php"; ?>
 
+<h2>Find Course</h2>
+
+<form method="post">
+    <label for="courseid">Course ID</label>
+    <input type="text" id="courseid" name="courseid">
+    <input type="submit" name="submit" value="View Results">
+</form>
+
 <?php
     if (isset($_POST['submit'])) {
   try {
@@ -62,22 +70,16 @@ if (isset($_POST['submit'])) {
                 <?php } ?>
                   </tbody>
                   </table>
-            }
+            
         <?php } else     { ?>
-         > No results found for <?php echo escape($_POST['courseid']); ?>.
+        <br>
+    
+        No results found for <?php echo escape($_POST['courseid']); ?>.
   <?php }
 } ?>
   
 
-
-    <h2>Find Another Course</h2>
-
-    <form method="post">
-        <label for="courseid">Course ID</label>
-        <input type="text" id="courseid" name="courseid">
-        <input type="submit" name="submit" value="View Results">
-    </form>
-
+    <br>
     <a href="index.php">Back to home</a>
 
     <?php require "footer.php" ?>
