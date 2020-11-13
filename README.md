@@ -3,7 +3,7 @@ COMP 373 Databases Final Project: Database Driven Web Application
 This repository represents a mock university database. 
 In order to run this program and web application: 
 
-- Download the following files into a folder 'database'
+- Download the following files into a folder 'databases'
 - Move the folder into XAMPP/htdocs
 - Go to http://localhost/databases/index.php in your browser
 
