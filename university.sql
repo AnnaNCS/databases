@@ -49,7 +49,7 @@ CREATE TABLE `Course`(
 `Time` VARCHAR (50),
 `Course_location` VARCHAR (50),
 `Student_enr` INT,
-`Description` VARCHAR (450),
+`Description` VARCHAR (650),
 PRIMARY KEY(`Course_id`)
 );
 
