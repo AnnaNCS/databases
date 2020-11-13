@@ -1,13 +1,20 @@
 <?php include "header.php"; ?>
 
     <ul>
-      <li>
-        <a href="create.php"><strong>Create</strong></a> - Add a course
-      </li>
-      <li>
-        <a href="read.php"><strong>Read</strong></a> - Find a course
-      </li>
+    
+    <a href="create.php"><strong>Add Course</a>
     </ul>
+    <ul>
+    <a href="read.php"><strong>Find Course</a>
+    </ul>
+    <ul>
+    <a href="register.php"><strong>See all Courses</a>
+    </ul>
+    <ul>
+    <a href="remove.php"><strong>Drop a Course</a>
+    
+    </ul>
+
   </body>
 </html>
 
