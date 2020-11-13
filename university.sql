@@ -25,7 +25,6 @@ CREATE TABLE `Professor`(
 PRIMARY KEY(`Professor_id`)
 );
 
-
 CREATE TABLE `Student`(
 `Student_id` VARCHAR(50) NOT NULL,
 `First_name` VARCHAR (50),
@@ -38,7 +37,6 @@ CREATE TABLE `Student`(
 `Course 4` VARCHAR (50),
 PRIMARY KEY(`Student_id`)
 );
-
 
 CREATE TABLE `Course`(
 `Course_id` VARCHAR(50) NOT NULL,
@@ -55,7 +53,7 @@ PRIMARY KEY(`Course_id`)
 
 INSERT INTO Location
 VALUES
-('O100','Swan',100), ('O101','Swan',101),('O102','Swan',102),('O103','Swan',103),('O104','Swan',104),('O105','Swan',105),('O106','Swan',106),('O107','Swan',107),('O108','Swan',108),('O109','Swan',109),('O110','Swan',110),('O111','Swan',111),('O112','Swan',112),('O113','Swan',113),('O114','Swan',114),('O115','Swan',115),
+('O100','Swan',100),('O101','Swan',101),('O102','Swan',102),('O103','Swan',103),('O104','Swan',104),('O105','Swan',105),('O106','Swan',106),('O107','Swan',107),('O108','Swan',108),('O109','Swan',109),('O110','Swan',110),('O111','Swan',111),('O112','Swan',112),('O113','Swan',113),('O114','Swan',114),('O115','Swan',115),
 ('O200','Swan',200),('O201','Swan',201),('O202','Swan',202),('O203','Swan',203),('O204','Swan',204),('O205','Swan',205),('O206','Swan',206),('O207','Swan',207),('O208','Swan',208),('O209','Swan',209),('O210','Swan',210),('O211','Swan',211),('O212','Swan',212),('O213','Swan',213),('O214','Swan',214),('O215','Swan',215),
 ('O300','Swan',300),('O301','Swan',301),('O302','Swan',302),('O303','Swan',303),('O304','Swan',304),('O305','Swan',305),('O306','Swan',306),('O307','Swan',307),('O308','Swan',308),('O309','Swan',309),('O310','Swan',310),('O311','Swan',311),('O312','Swan',312),('O313','Swan',313),('O314','Swan',314),('O315','Swan',315),
 ('O400','Swan',400),('O401','Swan',401),('O402','Swan',402),('O403','Swan',403),('O404','Swan',404),('O405','Swan',405),('O406','Swan',406),('O407','Swan',407),('O408','Swan',408),('O409','Swan',409),('O410','Swan',410),('O411','Swan',411),('O412','Swan',412),('O413','Swan',413),('O414','Swan',414),('O415','Swan',415),
@@ -413,7 +411,7 @@ VALUES
 ('LING355',	'Sociolinguistics',	'LING',	4,	'P1055',	'MWF 4:30-5:15',	'B207',	28,	'The core goal of the course is to identify phonological and morphosyntactic variation throughout Spain, Latin America, and the US, and identify what this variation tells us about language change and development as well as about the social characteristics and identities of the speakers themselves.'),
 ('LING355-2',	'Sociolinguistics',	'LING',	4,	'P1056',	'MWF 10:00-10:45',	'B208',	29,	'The core goal of the course is to identify phonological and morphosyntactic variation throughout Spain, Latin America, and the US, and identify what this variation tells us about language change and development as well as about the social characteristics and identities of the speakers themselves.'),
 ('LING330',	'Linguistics for Cognitive Science',	'LING',	4,	'P1058',	'TR 2:30-4:00',	'B209',	30,	'Language and cognition are intimately related. For this reason Linguistics has had an extremely strong influence on Cognitive Science. This course studies language and linguistics in the context of Cognitive Science.'),
-('LING330',	'Linguistics for Cognitive Science',	'LING',	4,	'P1056',	'TR 8:30-10:00',	'B210',	30,	'Language and cognition are intimately related. For this reason Linguistics has had an extremely strong influence on Cognitive Science. This course studies language and linguistics in the context of Cognitive Science.'),
+('LING330-2',	'Linguistics for Cognitive Science',	'LING',	4,	'P1056',	'TR 8:30-10:00',	'B210',	30,	'Language and cognition are intimately related. For this reason Linguistics has had an extremely strong influence on Cognitive Science. This course studies language and linguistics in the context of Cognitive Science.'),
 ('LING150',	'Formal Logic',	'LING',	4,	'P1013',	'TR 6:30-8:00',	'B200',	30,	'This course introduces students to symbolic models of the structure of arguments, and to tools for representing those structures and evaluating them as patterns of good or bad arguments.'),
 ('LING150-2',	'Formal Logic',	'LING',	4,	'P1057',	'TR 10:30-12:00',	'B200',	29,	'This course introduces students to symbolic models of the structure of arguments, and to tools for representing those structures and evaluating them as patterns of good or bad arguments.'),
 ('LING150-3',	'Formal Logic',	'LING',	4,	'P1056',	'MWF 7:00-7:45',	'B200',	28,	'This course introduces students to symbolic models of the structure of arguments, and to tools for representing those structures and evaluating them as patterns of good or bad arguments.'),
@@ -422,7 +420,7 @@ VALUES
 ('LING341',	'History of the Spanish Language',	'LING',	4,	'P1057',	'MWF 2:30-3:15',	'B201',	29,	'This course consists of an introduction to historical Hispanic linguistics. Students learn about the major phonological, morphosyntactic, and lexical changes that have occurred in the language from the time of the arrival of the Roman armies into the Iberian Peninsula until the present.'),
 ('LING341-2',	'History of the Spanish Language',	'LING',	4,	'P1057',	'MWF 10:00-10:45',	'B201',	29,	'This course consists of an introduction to historical Hispanic linguistics. Students learn about the major phonological, morphosyntactic, and lexical changes that have occurred in the language from the time of the arrival of the Roman armies into the Iberian Peninsula until the present.'),
 ('LING343',	'Spanish Sociolinguistics',	'LING',	4,	'P1013',	'MWF 3:30-4:15',	'B202',	30,	'The core goal of the course is to identify phonological and morphosyntactic variation throughout Spain, Latin America, and the US, and identify what this variation tells us about language change and development as well as about the social characteristics and identities of the speakers themselves.'),
-('LING343-2',	'Spanish Sociolinguistics',	'LING',	4,	'P1013',	'MWF 8:00-8:45',	'B021',	30,	'The core goal of the course is to identify phonological and morphosyntactic variation throughout Spain, Latin America, and the US, and identify what this variation tells us about language change and development as well as about the social characteristics and identities of the speakers themselves.'),
+('LING343-2',	'Spanish Sociolinguistics',	'LING',	4,	'P1013',	'MWF 8:00-8:45',	'B201',	30,	'The core goal of the course is to identify phonological and morphosyntactic variation throughout Spain, Latin America, and the US, and identify what this variation tells us about language change and development as well as about the social characteristics and identities of the speakers themselves.'),
 ('COGS101',	'Introduction to Cognitive Science',	'COGS',	4,	'P1036',	'MWF 7:00-7:45',	'B100',	24,	'An interdisciplinary introduction to the discovery of the mind through philosophical texts, psychological experiments, artificial intelligence, the study of nerve cells and neural networks and investigations into language. The purpose of the course is to foster an appreciation of the wonder and complexity of minds and brains, both human and otherwise.'),
 ('COGS101-2',	'Introduction to Cognitive Science',	'COGS',	4,	'P1036',	'MWF 1:30-2:15',	'B101',	29,	'An interdisciplinary introduction to the discovery of the mind through philosophical texts, psychological experiments, artificial intelligence, the study of nerve cells and neural networks and investigations into language. The purpose of the course is to foster an appreciation of the wonder and complexity of minds and brains, both human and otherwise.'),
 ('COGS101-3',	'Introduction to Cognitive Science',	'COGS',	4,	'P1036',	'MWF 10:00-10:45',	'B102',	28,	'An interdisciplinary introduction to the discovery of the mind through philosophical texts, psychological experiments, artificial intelligence, the study of nerve cells and neural networks and investigations into language. The purpose of the course is to foster an appreciation of the wonder and complexity of minds and brains, both human and otherwise.'),
@@ -452,6 +450,7 @@ VALUES
 ('COGS490',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 7:00-7:45',	'B105',	30,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.'),
 ('COGS490-2',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 1:30-2:15',	'B103',	25,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.');
 
+
 ALTER TABLE `Major`
 ADD FOREIGN KEY (`Dep_char`) REFERENCES `Professor`(`Professor_id`);
 
@@ -463,10 +462,16 @@ ALTER TABLE `Professor`
 ADD FOREIGN KEY(`Dept_in`) REFERENCES `Major`(`Dep_id`),
 ADD FOREIGN KEY(`Office_location`) REFERENCES `Location`(`Location_code`);
 
+/*
+SELECT DISTINCT Course_location FROM 
+   Course tags LEFT JOIN Location sc ON tags.Course_location=sc.Location_code 
+WHERE sc.Location_code IS NULL;
+*/
+#Code to debug for foreign keys 
+
 ALTER TABLE `Course`
 ADD FOREIGN KEY(`Dept_id`) REFERENCES `Major`(`Dep_id`),
 ADD FOREIGN KEY(`Professor`) REFERENCES `Professor`(`Professor_id`),
 ADD FOREIGN KEY(`Course_location`) REFERENCES `Location`(`Location_code`);
-
 
 
