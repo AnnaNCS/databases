@@ -8,6 +8,13 @@
     <input type="submit" name="submit" value="View Results">
 </form>
 
+<form method="post">
+    <label for="major">Major</label>
+    <input type="text" id="major" name="major">
+    <input type="submit" name="submit1" value="View Results">
+</form>
+
+
 <?php
     if (isset($_POST['submit'])) {
   try {
@@ -31,7 +38,32 @@ $result = $statement->fetchAll();
 }
 ?>
 
-    <?php include "footer.php"; ?>
+<?php include "footer.php"; ?>
+
+<?php
+    if (isset($_POST['submit1'])) {
+  try {
+    require "config.php";
+    require "common.php";
+
+    $connection1 = new PDO($dsn, $username, $password, $options);
+      $sql1 = "SELECT *
+        FROM Major
+        WHERE Name = :major";
+        $major = $_POST['major'];
+
+        $statement1 = $connection1->prepare($sql1);
+        $statement1->bindParam(':major', $major, PDO::PARAM_STR);
+        $statement1->execute();
+
+$result1 = $statement1->fetchAll();
+  } catch(PDOException $error) {
+    echo $sql . "<br>" . $error->getMessage();
+  }
+}
+?>
+
+<?php include "footer.php"; ?>
 
 
 <?php
@@ -79,8 +111,42 @@ if (isset($_POST['submit'])) {
 } ?>
   
 
+<?php
+
+if (isset($_POST['submit1'])) {
+        if ($result1 && $statement1->rowCount() > 0) { ?>
+                <h2>Results</h2>
+
+    <table>
+      <thead>
+<tr>
+  <th>Department ID</th>
+  <th>Name</th>
+  <th>Department Chair</th>
+  
+</tr>
+      </thead>
+      <tbody>
+        <?php    foreach ($result1 as $row) { ?>
+                      <tr>
+                <td><?php echo escape($row["Dep_id"]); ?></td>
+                <td><?php echo escape($row["Name"]); ?></td>
+                <td><?php echo escape($row["Dep_char"]); ?></td>
+                      </tr>
+                <?php } ?>
+                  </tbody>
+                  </table>
+            
+        <?php } else     { ?>
+        <br>
+    
+        No results found for <?php echo escape($_POST['major']); ?>.
+  <?php }
+} ?>
+
+
+
     <br>
     <a href="index.php">Back to home</a>
 
     <?php require "footer.php" ?>
-
