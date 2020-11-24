@@ -220,7 +220,7 @@ VALUES
 ('S1050',	'Rutger',	'Clorley',	'P1017',	'PSYC',	'PSYC101-3',	'PSYC200-2',	'PSYC306',	'PSYC295-2'),
 ('S1051',	'Farr',	'Snoxall',	'P1001',	'COMP',	'COMP229-2',	'COMP131-2',	'COGS220',	'COGS101-3'),
 ('S1052',	'Alica',	'Lebrun',	'P1033',	'NULL',	'GEO105',	'MATH320',	'MAC210',	'BLST207'),
-('S1053',	'Correna',	'Orton',	'P1017',	'PSYC',	'PSYC200',	'PSYC101-3',	'PSYC295',	'GEO345')
+('S1053',	'Correna',	'Orton',	'P1017',	'PSYC',	'PSYC200',	'PSYC101-3',	'PSYC295',	'GEO345'),
 ('S1054',	'Nonah',	'Mil',	'P1018',	'NULL',	'BIO103',	'COMP149',	'GEO105',	'BLST207'),
 ('S1055',	'Mar',	'Skermer',	'P1014',	'MAC',	'MAC210-2',	'MAC295-2',	'MAC241',	'BLST376'),
 ('S1056',	'Sybil',	'Scheu',	'P1004',	'COMP',	'COMP131-3',	'COMP229-2',	'COMP146',	'COGS101'),
