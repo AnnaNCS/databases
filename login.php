@@ -77,7 +77,24 @@ if (isset($_POST['submit'])) {
                 <?php } ?>
                   </tbody>
                   </table>
-        
+    <br/>
+
+<?php
+    
+    $connection = new PDO($dsn, $username, $password, $options);
+        $course1 = "SELECT *
+          FROM Course
+          WHERE Course_id = :Course 1";
+        $course2 = "SELECT *
+          FROM Course
+          WHERE Course_id = :Course 2";
+    
+    
+    if (True) { ?>
+    <th>You do not have any time conflicts</th>
+    <?php printf($course1);
+    } ?>
+    
         <h2>Add or Drop Course</h2>
 
         <form method="post">

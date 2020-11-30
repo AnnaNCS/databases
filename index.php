@@ -4,13 +4,16 @@
     <a href="login.php"><strong>Log In</a>
     </ul>
     <ul>
+    <a href="registerstud.php"><strong>Register</a>
+    </ul>
+    <ul>
     <a href="create.php"><strong>Add Course</a>
     </ul>
     <ul>
     <a href="read.php"><strong>Find Course</a>
     </ul>
     <ul>
-    <a href="register.php"><strong>See all Courses</a>
+    <a href="navigate.php"><strong>Navigate</a>
     </ul>
    
 

@@ -1,4 +1,6 @@
-<?php include "header.php"; ?>
+<?php include "header.php";
+include('db_connection.php'); ?>
+
 
 <h2>Find Course</h2>
 
@@ -9,11 +11,24 @@
 </form>
 
 <form method="post">
-    <label for="major">Major</label>
-    <input type="text" id="major" name="major">
-    <input type="submit" name="submit1" value="View Results">
-</form>
+<label for="deptid">Department ID / Major</label>
+<?php
+$conn = OpenCon();
+$resultSet = "SELECT DISTINCT Dep_id FROM Major";
+$sql_dat = mysqli_query($conn, $resultSet)
+?>
 
+<select name="deptid">
+
+
+<?php
+while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
+    $deptid = $rows["Dep_id"];
+    echo "<option value='$deptid'>$deptid</option>";
+} ?>
+</select>
+<input type="submit" name="submit1" value="View Results">
+</form>
 
 <?php
     if (isset($_POST['submit'])) {
@@ -48,12 +63,12 @@ $result = $statement->fetchAll();
 
     $connection1 = new PDO($dsn, $username, $password, $options);
       $sql1 = "SELECT *
-        FROM Major
-        WHERE Name = :major";
-        $major = $_POST['major'];
+      FROM Course c
+      JOIN Major major_w ON major_w.Dep_id = c.Dept_id WHERE Dep_id = :deptid";
+      $deptid = $_POST['deptid'];
 
         $statement1 = $connection1->prepare($sql1);
-        $statement1->bindParam(':major', $major, PDO::PARAM_STR);
+        $statement1->bindParam(':deptid', $deptid, PDO::PARAM_STR);
         $statement1->execute();
 
 $result1 = $statement1->fetchAll();
@@ -126,21 +141,27 @@ if (isset($_POST['submit1'])) {
   
 </tr>
       </thead>
-      <tbody>
-        <?php    foreach ($result1 as $row) { ?>
-                      <tr>
-                <td><?php echo escape($row["Dep_id"]); ?></td>
-                <td><?php echo escape($row["Name"]); ?></td>
-                <td><?php echo escape($row["Dep_char"]); ?></td>
-                      </tr>
-                <?php } ?>
-                  </tbody>
+        <tbody>
+          <?php    foreach ($result1 as $row) { ?>
+                        <tr>
+                  <td><?php echo escape($row["Course_id"]); ?></td>
+                  <td><?php echo escape($row["Name"]); ?></td>
+                  <td><?php echo escape($row["Dept_id"]); ?></td>
+                  <td><?php echo escape($row["Units"]); ?></td>
+                  <td><?php echo escape($row["Professor"]); ?></td>
+                  <td><?php echo escape($row["Time"]); ?></td>
+                  <td><?php echo escape($row["Course_location"]); ?> </td>
+                  <td><?php echo escape($row["Student_enr"]); ?> </td>
+                  <td><?php echo escape($row["Description"]); ?> </td>
+                        </tr>
+                  <?php } ?>
+                    </tbody>
                   </table>
             
         <?php } else     { ?>
         <br>
     
-        No results found for <?php echo escape($_POST['major']); ?>.
+        No results found for <?php echo escape($_POST['deptid']); ?>.
   <?php }
 } ?>
 

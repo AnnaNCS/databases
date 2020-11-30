@@ -71,9 +71,9 @@ VALUES
 ('LIB100','Library',100),('LIB101','Library',101),('LIB102','Library',102),('LIB103','Library',103),('LIB104','Library',104),('LIB105','Library',105),('LIB106','Library',106),('LIB107','Library',107),('LIB108','Library',108),('LIB109','Library',109),('LIB110','Library',110),
 ('LIB200','Library',200),('LIB201','Library',201),('LIB202','Library',202),('LIB203','Library',203),('LIB204','Library',204),('LIB205','Library',205),('LIB206','Library',206),('LIB207','Library',207),('LIB208','Library',208),('LIB209','Library',209),('LIB210','Library',210),
 ('J100','Johnson',100),('J101','Johnson',101),('J102','Johnson',102),('J103','Johnson',103),('J104','Johnson',104),('J105','Johnson',105),('J106','Johnson',106),('J107','Johnson',107),('J108','Johnson',108),('J109','Johnson',109),('J110','Johnson',110),
-('J200','Johnson',200),('J201','Johnson',201),('J202','Johnson',202),('J203','Johnson',203),('J204','Johnson',204),('J205','Johnson',205),('J206','Johnson',206),('J207','Johnson',207),('J208','Johnson',208),('J209','Johnson',209),('J210','Johnson',210);
+('J200','Johnson',200),('J201','Johnson',201),('J202','Johnson',202),('J203','Johnson',203),('J204','Johnson',204),('J205','Johnson',205),('J206','Johnson',206),('J207','Johnson',207),('J208','Johnson',208),('J209','Johnson',209),('J210','Johnson',210), ('NULL', 'NULLL', 0);
 
-SELECT * FROM Location;
+#SELECT * FROM Location;
 
 INSERT INTO Major
 VALUES
@@ -90,7 +90,8 @@ VALUES
 ('MAC', 'Media Arts & Culture', 'P1014'),
 ('MATH', 'Mathematics', 'P1015'),
 ('PHIL', 'Philosophy', 'P1016'),
-('PSYC', 'Psycology', 'P1017');
+('PSYC', 'Psycology', 'P1017'),
+('NULL', 'NULL', 'NULL');
 
 INSERT INTO `Professor`
 VALUES
@@ -164,7 +165,8 @@ VALUES
 ('P1069', 'Zared', 'McEvay', 'PSYC', 'O503'),
 ('P1070', 'Devin', 'Bursnoll', 'PSYC', 'O504'),
 ('P1071', 'Drake', 'Bell', 'PSYC', 'O505'),
-('P1072', 'Josh', 'Peck', 'PSYC', 'O506');
+('P1072', 'Josh', 'Peck', 'PSYC', 'O506'),
+('NULL', 'NULL', 'NULL', 'NULL', 'NULL');
 
 INSERT INTO `Student`
 VALUES
@@ -181,10 +183,10 @@ VALUES
 ('S1011', 'Torie', 'Pickrill', 'P1059', 'MAC', 'MAC110', 'MAC146', 'MAC250', 'MAC270'),
 ('S1012', 'Tracy', 'Ellcock', 'P1036', 'COGS', 'COGS201-2', 'COGS230-2', 'COGS265', 'COGS242-2'),
 ('S1013', 'Edee', 'Saur', 'P1016', 'PHIL', 'PHIL101', 'PHIL231', 'BIO224', 'COMP131-2'),
-('S1014',	'Helaina',	'Ottosen',	'P1031',	'NULL',	'MATH320',	'COMP229-3',	'PHIL150-2',	'BIO103'),
-('S1015',	'Petey',	'Connah',	'P1027',	'BLST',	'BLST101',	'BLST207',	'BLST233',	'BLST302'),
-('S1016',	'Hadrian',	'Schuricht',	'P1001',	'COMP',	'COMP229',	'COMP131-2',	'COMP146',	'MATH110-3'),
-('S1017',	'Vaughn',	'Weinham',	'P1055',	'NULL',	'BIO103',	'CHEM100',	'GEO105',	'MAC210'),
+('S1014', 'Helaina', 'Ottosen', 'P1031', 'PHIL', 'MATH320', 'COMP229-3', 'PHIL150-2', 'BIO103'),
+('S1015', 'Petey', 'Connah', 'P1027', 'BLST', 'BLST101', 'BLST207', 'BLST233', 'BLST302'),
+('S1016', 'Hadrian', 'Schuricht', 'P1001', 'COMP', 'COMP229', 'COMP131-2', 'COMP146', 'MATH110-3'),
+('S1017', 'Vaughn', 'Weinham', 'P1055',	'BIO',	'BIO103', 'CHEM100', 'GEO105', 'MAC210'),
 ('S1018',	'Blinnie',	'Gibard',	'P1042',	'CTSJ',	'CTSJ100',	'CTSJ102-2',	'CTSJ221',	'CTSJ330'),
 ('S1019',	'Enos',	'Sonier',	'P1006',	'BIO',	'BIO103-2',	'BIO268',	'BIO224',	'BIO260'),
 ('S1020',	'Corrie',	'Ysson',	'P1037',	'COGS',	'COGS104-2',	'COGS101-3',	'COGS201',	'COGS220'),
@@ -294,7 +296,7 @@ VALUES
 ('S1124',	'Sal',	'Arkil',	'P1043',	'CTSJ',	'CTSJ102-2',	'CTSJ221',	'HIST121',	'LING301'),
 ('S1125',	'Vanya',	'Marcroft',	'P1057',	'NULL',	'BIO103',	'PHIL150-2',	'GEO245',	'MAC210'),
 ('S1126',	'Bradley',	'MacTrustey',	'P1001',	'COMP',	'COMP229-2',	'COMP146',	'MATH110-3',	'COGS101'),
-('S1127',	'Haroun	Winkworth',	'P1032',	'CHEM',	'CHEM100',	'CHEM120',	'CTSJ221',	'CHEM195'),
+('S1127',	'Haroun',	'Winkworth',	'P1032',	'CHEM',	'CHEM100',	'CHEM120',	'CTSJ221',	'CHEM195'),
 ('S1128',	'Ferris',	'Huxtable',	'P1060',	'MAC',	'MAC210-2',	'MAC490-2',	'BLST376',	'CTSJ295'),
 ('S1129',	'Kylila',	'Ditter',	'P1024',	'BIO',	'BIO333',	'BIO224',	'BIO260',	'CHEM340'),
 ('S1130',	'Denis',	'Isbell',	'P1023',	'BIO',	'BIO224',	'BIO260',	'BIO333',	'MAC271'),
@@ -650,9 +652,9 @@ VALUES
 ('S1480',	'Tim',	'Genney',	'P1006',	'BIO',	'BIO490-2',	'BIO333',	'BIO349-2',	'BIO268-2'),
 ('S1481',	'Ranice',	'Franzonetti',	'P1008',	'CHEM',	'CHEM100-3',	'CHEM120-2',	'CHEM220-2',	'CHEM195-2'),
 ('S1482',	'Farra',	'MacGoun',	'P1031',	'CHEM',	'CHEM490',	'CHEM195-2',	'CHEM100-3',	'CHEM315-2'),
-('S1483',	'Romola',	'Bruckmann',	'P1032',	'CHEM',	'CHEM100-3',	'CHEM120-2',	'CHEM220-2',	'CHEM195-2'),
-('S1484',	'Enid',	'Piolli',	'P1033',	'CHEM',	'CHEM315-2',	'CHEM195-2',	'CHEM100-3',	'MATH214'),
-('S1485',	'Raynell',	'Hallitt',	'P1008',	'CHEM'	'CHEM100-3',	'CHEM220-2',	'CHEM315-2', 'CHEM195-2'),
+('S1483', 'Romola', 'Bruckmann', 'P1032', 'CHEM', 'CHEM100-3', 'CHEM120-2', 'CHEM220-2', 'CHEM195-2'),
+('S1484', 'Enid', 'Piolli', 'P1033', 'CHEM', 'CHEM315-2', 'CHEM195-2', 'CHEM100-3', 'MATH214'),
+('S1485', 'Raynell', 'Hallitt',	'P1008', 'CHEM', 'CHEM100-3', 'CHEM220-2', 'CHEM315-2', 'CHEM195-2'),
 ('S1486',	'Tawnya',	'Jakubowicz',	'P1034',	'CHEM',	'CHEM220-2',	'CHEM100-3',	'CHEM120-2',	'CHEM490'),
 ('S1487',	'Tybalt',	'Godleman',	'P1031',	'CHEM',	'MATH214',	'CHEM100-3',	'CHEM195-2',	'CHEM220-2'),
 ('S1488',	'Roda',	'Torr',	'P1033',	'CHEM',	'CHEM100-3',	'CHEM315-2',	'CHEM220-2',	'CHEM490'),
@@ -1467,8 +1469,6 @@ VALUES
 ('COGS490',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 7:00-7:45',	'B105',	30,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.'),
 ('COGS490-2',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 1:30-2:15',	'B103',	25,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.');
 
-
-
 ALTER TABLE `Major`
 ADD FOREIGN KEY (`Dep_char`) REFERENCES `Professor`(`Professor_id`);
 
@@ -1486,6 +1486,12 @@ SELECT DISTINCT Course_location FROM
 WHERE sc.Location_code IS NULL;
 */
 #Code to debug for foreign keys 
+
+/*
+SELECT DISTINCT Dep_id FROM 
+   Major tags LEFT JOIN Student sc ON tags.Dep_id=sc.Major 
+WHERE sc.Major IS NULL;
+*/
 
 ALTER TABLE `Course`
 ADD FOREIGN KEY(`Dept_id`) REFERENCES `Major`(`Dep_id`),

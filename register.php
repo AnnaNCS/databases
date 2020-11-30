@@ -1,11 +1,11 @@
-<a href="index.php">Back to home</a>
+<a href="navigate.php">Back to Navigate</a>
 
 <?php
 
     
 include('db_connection.php');
 $conn = OpenCon();
-$sql_get = "SELECT * FROM Course";
+$sql_get = "SELECT * FROM Course ORDER BY Dept_id ASC";
 $sql_dat = mysqli_query($conn, $sql_get) or die('error getting data.');
 
 echo "<table>";
