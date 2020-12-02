@@ -18,13 +18,13 @@ include('db_connection.php'); ?>
         <label for="advisor">Advisor</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Last_name FROM Professor";
+        $resultSet = "SELECT DISTINCT Professor_id FROM Professor";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="advisor">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $advisor = $rows["Last_name"];
+            $advisor = $rows["Professor_id"];
             echo "<option value='$advisor'>$advisor</option>";
         } ?>
         </select>
@@ -33,13 +33,13 @@ include('db_connection.php'); ?>
         <label for="major">Major</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Name FROM Major";
+        $resultSet = "SELECT DISTINCT Dep_id FROM Major";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="major">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $major = $rows["Name"];
+            $major = $rows["Dep_id"];
             echo "<option value='$major'>$major</option>";
         } ?>
         </select>
@@ -48,13 +48,13 @@ include('db_connection.php'); ?>
         <label for="course1">Course 1</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Name FROM Course";
+        $resultSet = "SELECT DISTINCT Course_id FROM Course";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="course1">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $course1 = $rows["Name"];
+            $course1 = $rows["Course_id"];
             echo "<option value='$course1'>$course1</option>";
         } ?>
         </select>
@@ -63,13 +63,13 @@ include('db_connection.php'); ?>
         <label for="course2">Course 2</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Name FROM Course";
+        $resultSet = "SELECT DISTINCT Course_id FROM Course";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="course2">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $course2 = $rows["Name"];
+            $course2 = $rows["Course_id"];
             echo "<option value='$course2'>$course2</option>";
         } ?>
         </select>
@@ -78,13 +78,13 @@ include('db_connection.php'); ?>
         <label for="course3">Course 3</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Name FROM Course";
+        $resultSet = "SELECT DISTINCT Course_id FROM Course";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="course3">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $course3 = $rows["Name"];
+            $course3 = $rows["Course_id"];
             echo "<option value='$course3'>$course3</option>";
         } ?>
         </select>
@@ -92,13 +92,13 @@ include('db_connection.php'); ?>
         <label for="course4">Course 4</label>
         <?php
         $conn = OpenCon();
-        $resultSet = "SELECT DISTINCT Name FROM Course";
+        $resultSet = "SELECT DISTINCT Course_id FROM Course";
         $sql_dat = mysqli_query($conn, $resultSet)
         ?>
         <select name="course4">
         <?php
         while ($rows = mysqli_fetch_array($sql_dat, MYSQLI_ASSOC)){
-            $course4 = $rows["Name"];
+            $course4 = $rows["Course_id"];
             echo "<option value='$course4'>$course4</option>";
         } ?>
         </select>
@@ -125,10 +125,10 @@ if (isset($_POST['submit'])) {
     "Last_name" => $_POST['lastname'],
     "Advisor" => $_POST['advisor'],
     "Major" => $_POST['major'],
-    "Course 1" => $_POST['course1'],
-    "Course 2" => $_POST['course2'],
-    "Course 3" => $_POST['course3'],
-    "Course 4" => $_POST['course4'],
+    "Course_1" => $_POST['course1'],
+    "Course_2" => $_POST['course2'],
+    "Course_3" => $_POST['course3'],
+    "Course_4" => $_POST['course4'],
     );
       
 $sql = sprintf(

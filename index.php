@@ -1,7 +1,7 @@
 <?php include "header.php"; ?>
 
     <ul>
-    <a href="login.php"><strong>Log In</a>
+    <a href="login2.php"><strong>Log In</a>
     </ul>
     <ul>
     <a href="registerstud.php"><strong>Register</a>

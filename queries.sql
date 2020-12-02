@@ -1,15 +1,10 @@
 USE university;
 
-SELECT *
-FROM Student
-WHERE Major = 'BIO'
-ORDER BY Student.Last_name ASC;
 
 # How many students are there for each major
 SELECT Major, COUNT(Major) 
 FROM Student
-GROUP BY Major
-ORDER BY COUNT(MAJOR) DESC;
+GROUP BY Major;
 
 # How many sections are there of a class
 SELECT Name, COUNT(Name) 

@@ -31,10 +31,10 @@ CREATE TABLE `Student`(
 `Last_name` VARCHAR (50),
 `Advisor` VARCHAR (50),
 `Major` VARCHAR(50),
-`Course 1` VARCHAR (50),
-`Course 2` VARCHAR (50),
-`Course 3` VARCHAR (50),
-`Course 4` VARCHAR (50),
+`Course_1` VARCHAR (50),
+`Course_2` VARCHAR (50),
+`Course_3` VARCHAR (50),
+`Course_4` VARCHAR (50),
 PRIMARY KEY(`Student_id`)
 );
 
@@ -496,7 +496,7 @@ VALUES
 ('S1324',	'Jakob',	'Hulburt',	'P1016',	'PHIL',	'PHIL490',	'PHIL 242-2',	'PHIL344',	'PHIL350'),
 ('S1325',	'Colin',	'Mold',	'P1066',	'PHIL',	'PHIL350',	'PHIL150-3',	'PHIL231',	'PHIL 242-2'),
 ('S1326',	'Becki',	'Crush',	'P1067',	'PHIL',	'PHIL231',	'PHIL490',	'PHIL360',	'PHIL150-3'),
-('S1327',	'Una',	'McArdle',	'P1068',	'PHIL',	'PHIL350',	'PHIL 242-2',	'PHIL344',	'PHIL350'),
+('S1327',	'Una',	'McArdle',	'P1068',	'PHIL',	'PHIL350',	'PHIL 242-2',	'PHIL344',	'PHIL231'),
 ('S1328',	'Newton',	'Sleith',	'P1016',	'PHIL',	'PHIL490',	'PHIL150-3',	'PHIL360',	'PHIL231'),
 ('S1329',	'Viola',	'Staves',	'P1019',	'PHIL',	'PHIL350',	'PHIL490',	'PHIL344',	'PHIL360'),
 ('S1330',	'Domenico',	'Harnetty',	'P1016',	'PHIL',	'PHIL150-3',	'PHIL360',	'PHIL231',	'PHIL321'),
@@ -713,7 +713,7 @@ VALUES
 ('S1541',	'Georgi',	'Pavinese',	'P1047',	'GEO',	'GEO106-2',	'GEO245-2',	'CHEM315-2',	'GEO105-2'),
 ('S1542',	'Tania',	'Nono',	'P1002',	'GEO',	'GEO105-2',	'GEO395',	'PSYC295-2',	'GEO106-2'),
 ('S1543',	'Reg',	'Test',	'P1047',	'GEO',	'GEP342-2',	'GEO491-2',	'GEO105-2',	'GEO395'),
-('S1544',	'Cristabel',	'Staddart',	'P1045',	'GEO',	'GEO491-2',	'GEO106-2','GEO395',	'GEO491-2'),
+('S1544',	'Cristabel',	'Staddart',	'P1045',	'GEO',	'GEO491-2',	'GEO106-2','GEO395',	'GEO106-2'),
 ('S1545',	'Uriel',	'Alliban',	'P1002',	'GEO',	'GEO105-2',	'GEO395',	'GEO106-2',	'GEP342-2'),
 ('S1546',	'Pietra',	'Gooble', 'P1046',	'GEO',	'CHEM315-2',	'GEP342-2',	'GEO105-2',	'PSYC295-2'),
 ('S1547',	'Mic',	'Goadby',	'P1002',	'GEO',	'GEO245-2',	'GEO106-2',	'GEO491-2',	'GEP342-2'),
@@ -845,7 +845,7 @@ VALUES
 ('S1673',	'Gabriel',	'Gligoraci',	'P1029',	'BLST',	'BLST101-2',	'BLST377-2',	'BLST233',	'BLST346'),
 ('S1674',	'Roderic',	'Winley',	'P1027',	'BLST',	'BLST309',	'BLST346',	'BLST215',	'BLST105'),
 ('S1675',	'Tome',	'Garnul',	'P1007',	'BLST',	'BLST233',	'BLST101',	'BLST111',	'BLST105'),
-('S1676',	'Richie',	'Ajsik',	'P1026',	'BLST',	'BLST309',	'BLST376',	'BLST101-2',	'BLST309'),
+('S1676',	'Richie',	'Ajsik',	'P1026',	'BLST',	'BLST309',	'BLST376',	'BLST101-2',	'BLST215'),
 ('S1677',	'Briano',	'Fountain',	'P1028',	'BLST',	'BLST377-2',	'BLST302',	'BLST111-2',	'BLST320'),
 ('S1678',	'Jeniffer',	'Ramey',	'P1007',	'BLST',	'BLST346',	'BLST105',	'BLST101-2',	'BLST302'),
 ('S1679',	'Val',	'Burry',	'P1030',	'BLST',	'BLST111',	'BLST309',	'BLST215',	'BLST376'),
@@ -1467,7 +1467,9 @@ VALUES
 ('COGS390',	'The State of Science',	'COGS',	4,	'P1040',	'MWF 4:30-5:15',	'B104',	27,	'A recent replication crisis in the sciences has led to large-scale questioning centered on scientific integrity.'),
 ('COGS495',	'Advanced Research',	'COGS',	4,	'P1037', 'TR 10:30-12:00',	'B101',	30,	'Students with substantial directed research experience will conduct an independent research project of their own design, with guidance from a faculty mentor.'),
 ('COGS490',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 7:00-7:45',	'B105',	30,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.'),
-('COGS490-2',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 1:30-2:15',	'B103',	25,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.');
+('COGS490-2',	'Senior Seminar',	'COGS',	4,	'P1009',	'MWF 1:30-2:15',	'B103',	25,	'This course will support senior cognitive science majors as they conduct original research as part of their senior comprehensive requirement.'),
+('NULL',	'NULL',	'NULL',	0,	'NULL',	'NULL',	'NULL',	0,	'NULL');
+
 
 ALTER TABLE `Major`
 ADD FOREIGN KEY (`Dep_char`) REFERENCES `Professor`(`Professor_id`);
